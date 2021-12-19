@@ -53,3 +53,17 @@ Only one valid answer exists.'''
 
 '''Dictionary Solution'''
 
+class Solution:
+    def twoSum(self, nums, target):
+        d={}
+        for i,num in enumerate(nums):
+            if target-num in d: #checks d for the difference of the previous num in d
+                #print(d[target-num], i)
+                return d[target-num], i
+            d[num]=i
+
+target = 6
+arr = [3,3]
+
+obj = Solution()
+arr2 = obj.twoSum(arr, target)
