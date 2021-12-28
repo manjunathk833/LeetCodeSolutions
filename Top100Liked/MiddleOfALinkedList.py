@@ -10,6 +10,8 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
         return slow
+
+
 '''
 Approach 1: Output to Array
 Intuition and Algorithm
