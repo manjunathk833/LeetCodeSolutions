@@ -28,7 +28,7 @@ def bubblesort(arr,n):
                 arr[j+1] = temp
     return
 
-arr = [0, 1, 2, 0, 1, 2, 0]
+arr = [-12, 11, -13, -5, 6, -7, 5, -3, -6]
 n = len(arr)
 
 bubblesort(arr,n)
