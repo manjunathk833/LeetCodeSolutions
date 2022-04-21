@@ -1,11 +1,16 @@
-#function to find the kth smallest element
+def is_duplicate(arr):
+    setcheck = set()
+    for i in arr:
+        if i in setcheck:
+            return True
+        setcheck.add(i)
+    return False
 
-def smallest(arr, k):
-    arr.sort()
-    return arr[k-1]
+arr = [5, 4, 3, 1]
 
-arr = [2, 1, 3, 4, 5, 8, 11, 34, 6, 8]
+status = is_duplicate(arr)
 
-ele = smallest(arr, 2)
-
-print(ele)
+if status:
+    print("duplicates exist")
+else:
+    print("no duplicates")

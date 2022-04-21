@@ -24,14 +24,15 @@ def move_neg(arr, n):
     while low <= high:
         if arr[low] > 0:
             arr[low], arr[high] = arr[high], arr[low]
+            #low = low + 1
+        elif arr[low] <= 0:
             low = low + 1
-            high = high - 1
-        else:
-            low = low + 1
+        if arr[high] > 0:
+            high -= 1
     return
 
 
-arr = [-12, 11, -13, -5, 6, -7, 5, -3, -6]
+arr = [-12, 11, -13, -5, 6, -7, 5, 3, -6]
 n = len(arr)
 
 move_neg(arr, n)
