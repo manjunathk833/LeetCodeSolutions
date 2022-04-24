@@ -1,3 +1,5 @@
+#Given a 2d matrix search for a given element using binary search
+
 def bin_search(arr, ele):
     row, col = len(arr), len(arr[0])
     top, bot = 0, row-1
