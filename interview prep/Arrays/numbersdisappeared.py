@@ -1,18 +1,16 @@
 def findDisappearedNumbers(nums):
-    l = len(nums)
-    arrhash = dict.fromkeys(range(1, l+1), 0)
-    #print(arrhash[0])
+    for n in nums:
+        i = abs(n) - 1
 
-    for i in arrhash:
-        for j in range(l):
-            if nums[j] == i:
-                arrhash[i] = 1 + arrhash[i]
-    #print(arrhash)
+        nums[i] = -1 *abs(nums[i])
+
+    print(nums)
     res = []
-    for i in arrhash:
-        if arrhash[i] == 0:
-            res.append(i)
-    return res
+    for i, n in enumerate(nums):
+        #print(i, n)
+        if n>0:
+            res.append((i+1))
+    return  res
 
 nums = [4,3,2,7,8,2,3,1]
 res = findDisappearedNumbers(nums)
