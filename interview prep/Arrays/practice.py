@@ -1,16 +1,18 @@
-def is_duplicate(arr):
-    setcheck = set()
-    for i in arr:
-        if i in setcheck:
-            return True
-        setcheck.add(i)
-    return False
 
-arr = [5, 4, 3, 1]
+def twoSum(arr, sum):
+    sumMap = {}
+    for i, n in enumerate(arr):
+        diff = sum - n
+        if diff in sumMap:
+            return [sumMap[diff], i]
+        sumMap[n] = i
 
-status = is_duplicate(arr)
 
-if status:
-    print("duplicates exist")
+arr = [1, 2, 3, 4]
+sum = 3
+
+res = twoSum(arr, sum)
+if res:
+    print("indices", res)
 else:
-    print("no duplicates")
+    print("no sum found")

@@ -19,6 +19,10 @@ Input: nums = [1]
 Output: 1
 '''
 
+'''
+using hashset: can be solved using hash set but uses o(n) memory
+Approach: xor anything with itself is 0 and anything xor with 0 is 1 hennce we can xor single number with duplicates to get that number
+'''
 
 def singleNumber(nums):
     res = 0
