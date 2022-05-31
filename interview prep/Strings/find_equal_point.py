@@ -1,4 +1,6 @@
 # Method to find an equal index
+
+
 def findIndex(str):
     l = len(str)
     open = [0] * (l + 1)
